@@ -1,105 +1,4 @@
-<img src="https://github.com/0xProject/branding/blob/master/0x%20Logo/PNG/0x-Logo-Black.png" width="150px" >
-
----
-
-[0x][website-url] is an open protocol that facilitates trustless, low friction exchange of Ethereum-based assets. For more information on how it works, check out the [0x protocol specification](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md).
-
-This repository is a monorepo including the 0x protocol smart contracts and numerous developer tools. Each public sub-package is independently published to NPM.
-
-[website-url]: https://0x.org
-
-[![CircleCI](https://circleci.com/gh/0xProject/0x-monorepo.svg?style=svg&circle-token=61bf7cd8c9b4e11b132089dfcffdd1be277d1e0c)](https://circleci.com/gh/0xProject/0x-monorepo)
-[![Coverage Status](https://coveralls.io/repos/github/0xProject/0x-monorepo/badge.svg?branch=development)](https://coveralls.io/github/0xProject/0x-monorepo?branch=development)
-[![Discord](https://img.shields.io/badge/chat-discord.chat-yellow.svg?style=flat)](https://discordapp.com/invite/d3FTX3M)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-## Packages
-
-Visit our [developer portal](https://0x.org/docs/tools/order-utils) for a comprehensive list of core & community maintained packages. All packages maintained with this monorepo are listed below.
-
-### Python Packages
-
-| Package                                                        | Version                                                                                                             | Description                                                                                       |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [`0x-contract-addresses`](/python-packages/contract_addresses) | [![PyPI](https://img.shields.io/pypi/v/0x-contract-addresses.svg)](https://pypi.org/project/0x-contract-addresses/) | A tiny utility library for getting known deployed contract addresses for a particular network     |
-| [`0x-contract-artifacts`](/python-packages/contract_artifacts) | [![PyPI](https://img.shields.io/pypi/v/0x-contract-artifacts.svg)](https://pypi.org/project/0x-contract-artifacts/) | 0x smart contract compilation artifacts                                                           |
-| [`0x-contract-wrappers`](/python-packages/contract_wrappers)   | [![PyPI](https://img.shields.io/pypi/v/0x-contract-wrappers.svg)](https://pypi.org/project/0x-contract-wrappers/)   | 0x smart contract wrappers                                                                        |
-| [`0x-json-schemas`](/python-packages/json_schemas)             | [![PyPI](https://img.shields.io/pypi/v/0x-json-schemas.svg)](https://pypi.org/project/0x-json-schemas/)             | 0x-related JSON schemas                                                                           |
-| [`0x-order-utils`](/python-packages/order_utils)               | [![PyPI](https://img.shields.io/pypi/v/0x-order-utils.svg)](https://pypi.org/project/0x-order-utils/)               | A set of utilities for generating, parsing, signing and validating 0x orders                      |
-| [`0x-sra-client`](/python-packages/sra_client)                 | [![PyPI](https://img.shields.io/pypi/v/0x-sra-client.svg)](https://pypi.org/project/0x-sra-client/)                 | A Python client for interacting with servers conforming to the Standard Relayer API specification |
-
-### Solidity Packages
-
-These packages are all under development. See [/contracts/README.md](/contracts/README.md) for a list of deployed packages.
-
-| Package                                                             | Version                                                                                                                                     | Description                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`@0x/contracts-asset-proxy`](/contracts/asset-proxy)               | [![npm](https://img.shields.io/npm/v/@0x/contracts-asset-proxy.svg)](https://www.npmjs.com/package/@0x/contracts-asset-proxy)               | [`AssetProxy`](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md#assetproxy) contracts used within the protocol                                                                                               |
-| [`@0x/contracts-erc20`](/contracts/erc20)                           | [![npm](https://img.shields.io/npm/v/@0x/contracts-erc20.svg)](https://www.npmjs.com/package/@0x/contracts-erc20)                           | Implementations of various ERC20 tokens                                                                                                                                                                                                               |
-| [`@0x/contracts-erc721`](/contracts/erc721)                         | [![npm](https://img.shields.io/npm/v/@0x/contracts-erc721.svg)](https://www.npmjs.com/package/@0x/contracts-erc721)                         | Implementations of various ERC721 tokens                                                                                                                                                                                                              |
-| [`@0x/contracts-erc1155`](/contracts/erc1155)                       | [![npm](https://img.shields.io/npm/v/@0x/contracts-erc1155.svg)](https://www.npmjs.com/package/@0x/contracts-erc1155)                       | Implementations of various ERC1155 tokens                                                                                                                                                                                                             |
-| [`@0x/contracts-exchange`](/contracts/exchange)                     | [![npm](https://img.shields.io/npm/v/@0x/contracts-exchange.svg)](https://www.npmjs.com/package/@0x/contracts-exchange)                     | The [`Exchange`](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md#exchange) contract used for settling trades within the protocol                                                                            |
-| [`@0x/contracts-exchange-forwarder`](/contracts/exchange-forwarder) | [![npm](https://img.shields.io/npm/v/@0x/contracts-exchange-forwarder.svg)](https://www.npmjs.com/package/@0x/contracts-exchange-forwarder) | A [`Forwarder`](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/forwarder-specification.md) contract used to simplify UX for interacting with the protocol                                                                      |
-| [`@0x/contracts-exchange-libs`](/contracts/exchange-libs)           | [![npm](https://img.shields.io/npm/v/@0x/contracts-exchange-libs.svg)](https://www.npmjs.com/package/@0x/contracts-exchange-libs)           | Protocol specific libraries used within the [`Exchange`](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md#exchange) contract                                                                                 |
-| [`@0x/contracts-extensions`](/contracts/extensions)                 | [![npm](https://img.shields.io/npm/v/@0x/contracts-extensions.svg)](https://www.npmjs.com/package/@0x/contracts-extensions)                 | Contracts that interact with and extend the functionality of the core protocol                                                                                                                                                                        |
-| [`@0x/contracts-multisig`](/contracts/multisig)                     | [![npm](https://img.shields.io/npm/v/@0x/contracts-multisig.svg)](https://www.npmjs.com/package/@0x/contracts-multisig)                     | Various implementations of multisignature wallets, including the [`AssetProxyOwner`](https://github.com/0xProject/0x-protocol-specification/blob/master/v2/v2-specification.md#assetproxyowner) contract that has permissions to upgrade the protocol |
-| [`@0x/contracts-test-utils`](/contracts/test-utils)                 | [![npm](https://img.shields.io/npm/v/@0x/contracts-test-utils.svg)](https://www.npmjs.com/package/@0x/contracts-test-utils)                 | TypeScript/Javascript shared utilities used for testing contracts                                                                                                                                                                                     |
-| [`@0x/contracts-utils`](/contracts/utils)                           | [![npm](https://img.shields.io/npm/v/@0x/contracts-utils.svg)](https://www.npmjs.com/package/@0x/contracts-utils)                           | Generic libraries and utilities used throughout all of the contracts                                                                                                                                                                                  |
-| [`@0x/contracts-coordinator`](/contracts/coordinator)               | [![npm](https://img.shields.io/npm/v/@0x/contracts-coordinator.svg)](https://www.npmjs.com/package/@0x/contracts-coordinator)               | A contract that allows users to execute 0x transactions with permission from a Coordinator                                                                                                                                                            |
-| [`@0x/contracts-dev-utils`](/contracts/dev-utils)                   | [![npm](https://img.shields.io/npm/v/@0x/contracts-dev-utils.svg)](https://www.npmjs.com/package/@0x/contracts-dev-utils)                   | A contract contains utility functions for developers (such as validating many orders using a single eth_call)                                                                                                                                         |
-
-### TypeScript/Javascript Packages
-
-#### 0x-specific packages
-
-| Package                                                  | Version                                                                                                                 | Description                                                                                       |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| [`0x.js`](/packages/0x.js)                               | [![npm](https://img.shields.io/npm/v/0x.js.svg)](https://www.npmjs.com/package/0x.js)                                   | An aggregate package combining many smaller utility packages for interacting with the 0x protocol |
-| [`@0x/contract-addresses`](/packages/contract-addresses) | [![npm](https://img.shields.io/npm/v/@0x/contract-addresses.svg)](https://www.npmjs.com/package/@0x/contract-addresses) | A tiny utility library for getting known deployed contract addresses for a particular network.    |
-| [`@0x/contract-wrappers`](/packages/contract-wrappers)   | [![npm](https://img.shields.io/npm/v/@0x/contract-wrappers.svg)](https://www.npmjs.com/package/@0x/contract-wrappers)   | JS/TS wrappers for interacting with the 0x smart contracts                                        |
-| [`@0x/order-utils`](/packages/order-utils)               | [![npm](https://img.shields.io/npm/v/@0x/order-utils.svg)](https://www.npmjs.com/package/@0x/order-utils)               | A set of utilities for generating, parsing, signing and validating 0x orders                      |
-| [`@0x/json-schemas`](/packages/json-schemas)             | [![npm](https://img.shields.io/npm/v/@0x/json-schemas.svg)](https://www.npmjs.com/package/@0x/json-schemas)             | 0x-related JSON schemas                                                                           |  |
-| [`@0x/migrations`](/packages/migrations)                 | [![npm](https://img.shields.io/npm/v/@0x/migrations.svg)](https://www.npmjs.com/package/@0x/migrations)                 | Migration tool for deploying 0x smart contracts on private testnets                               |
-| [`@0x/contract-artifacts`](/packages/contract-artifacts) | [![npm](https://img.shields.io/npm/v/@0x/contract-artifacts.svg)](https://www.npmjs.com/package/@0x/contract-artifacts) | 0x smart contract compilation artifacts                                                           |
-| [`@0x/abi-gen-wrappers`](/packages/abi-gen-wrappers)     | [![npm](https://img.shields.io/npm/v/@0x/abi-gen-wrappers.svg)](https://www.npmjs.com/package/@0x/abi-gen-wrappers)     | Low-level 0x smart contract wrappers generated using `@0x/abi-gen`                                |
-| [`@0x/sra-spec`](/packages/sra-spec)                     | [![npm](https://img.shields.io/npm/v/@0x/sra-spec.svg)](https://www.npmjs.com/package/@0x/sra-spec)                     | OpenAPI specification for the Standard Relayer API                                                |
-| [`@0x/connect`](/packages/connect)                       | [![npm](https://img.shields.io/npm/v/@0x/connect.svg)](https://www.npmjs.com/package/@0x/connect)                       | An HTTP/WS client for interacting with the Standard Relayer API                                   |
-| [`@0x/asset-buyer`](/packages/asset-buyer)               | [![npm](https://img.shields.io/npm/v/@0x/asset-buyer.svg)](https://www.npmjs.com/package/@0x/asset-buyer)               | Convenience package for discovering and buying assets with Ether                                  |
-| [`@0x/asset-swapper`](/packages/asset-swapper)           | [![npm](https://img.shields.io/npm/v/@0x/asset-swapper.svg)](https://www.npmjs.com/package/@0x/asset-swapper)           | Convenience package for discovering and performing swaps for any ERC20 Assets                     |
-
-#### Ethereum tooling
-
-| Package                                      | Version                                                                                                     | Description                                                                                                                                                                             |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`@0x/web3-wrapper`](/packages/web3-wrapper) | [![npm](https://img.shields.io/npm/v/@0x/web3-wrapper.svg)](https://www.npmjs.com/package/@0x/web3-wrapper) | An Ethereum JSON RPC client                                                                                                                                                             |
-| [`@0x/sol-compiler`](/packages/sol-compiler) | [![npm](https://img.shields.io/npm/v/@0x/sol-compiler.svg)](https://www.npmjs.com/package/@0x/sol-compiler) | A wrapper around solc-js that adds smart re-compilation, ability to compile an entire project, Solidity version specific compilation, standard input description support and much more. |
-| [`@0x/sol-coverage`](/packages/sol-coverage) | [![npm](https://img.shields.io/npm/v/@0x/sol-coverage.svg)](https://www.npmjs.com/package/@0x/sol-coverage) | A solidity test coverage tool                                                                                                                                                           |
-| [`@0x/sol-profiler`](/packages/sol-profiler) | [![npm](https://img.shields.io/npm/v/@0x/sol-profiler.svg)](https://www.npmjs.com/package/@0x/sol-profiler) | A solidity gas cost profiler                                                                                                                                                            |
-| [`@0x/sol-trace`](/packages/sol-trace)       | [![npm](https://img.shields.io/npm/v/@0x/sol-trace.svg)](https://www.npmjs.com/package/@0x/sol-trace)       | A solidity stack trace tool                                                                                                                                                             |
-| [`@0x/sol-resolver`](/packages/sol-resolver) | [![npm](https://img.shields.io/npm/v/@0x/sol-resolver.svg)](https://www.npmjs.com/package/@0x/sol-resolver) | Import resolver for smart contracts dependencies                                                                                                                                        |
-| [`@0x/subproviders`](/packages/subproviders) | [![npm](https://img.shields.io/npm/v/@0x/subproviders.svg)](https://www.npmjs.com/package/@0x/subproviders) | Web3 provider middlewares (e.g. LedgerSubprovider)                                                                                                                                      |
-| [`@0x/sol-doc`](/packages/sol-doc)           | [![npm](https://img.shields.io/npm/v/@0x/sol-doc.svg)](https://www.npmjs.com/package/@0x/sol-doc)           | Solidity documentation generator                                                                                                                                                        |
-
-#### Utilities
-
-| Package                                                  | Version                                                                                                                 | Description                                                     |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| [`@0x/abi-gen`](/packages/abi-gen)                       | [![npm](https://img.shields.io/npm/v/@0x/abi-gen.svg)](https://www.npmjs.com/package/@0x/abi-gen)                       | Tool to generate TS wrappers from smart contract ABIs           |
-| [`@0x/tslint-config`](/packages/tslint-config)           | [![npm](https://img.shields.io/npm/v/@0x/tslint-config.svg)](https://www.npmjs.com/package/@0x/tslint-config)           | Custom TSLint rules used by the 0x core team                    |
-| [`@0x/types`](/packages/types)                           | [![npm](https://img.shields.io/npm/v/@0x/types.svg)](https://www.npmjs.com/package/@0x/types)                           | Shared type declarations                                        |
-| [`@0x/typescript-typings`](/packages/typescript-typings) | [![npm](https://img.shields.io/npm/v/@0x/typescript-typings.svg)](https://www.npmjs.com/package/@0x/typescript-typings) | Repository of types for external packages                       |
-| [`@0x/utils`](/packages/utils)                           | [![npm](https://img.shields.io/npm/v/@0x/utils.svg)](https://www.npmjs.com/package/@0x/utils)                           | Shared utilities                                                |
-| [`@0x/assert`](/packages/assert)                         | [![npm](https://img.shields.io/npm/v/@0x/assert.svg)](https://www.npmjs.com/package/@0x/assert)                         | Type and schema assertions used by our packages                 |
-| [`@0x/base-contract`](/packages/base-contract)           | [![npm](https://img.shields.io/npm/v/@0x/base-contract.svg)](https://www.npmjs.com/package/@0x/base-contract)           | BaseContract used by auto-generated `abi-gen` wrapper contracts |
-| [`@0x/dev-utils`](/packages/dev-utils)                   | [![npm](https://img.shields.io/npm/v/@0x/dev-utils.svg)](https://www.npmjs.com/package/@0x/dev-utils)                   | Dev utils to be shared across 0x packages                       |
-| [`@0x/fill-scenarios`](/packages/fill-scenarios)         | [![npm](https://img.shields.io/npm/v/@0x/fill-scenarios.svg)](https://www.npmjs.com/package/@0x/fill-scenarios)         | 0x order fill scenario generator                                |
-
-#### Private Packages
-
-| Package                                            | Description                                                                      |
-| -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`@0x/instant`](/packages/instant)                 | A free and flexible way to offer simple crypto purchasing in any app or website. |
-| [`@0x/testnet-faucets`](/packages/testnet-faucets) | A faucet micro-service that dispenses test ERC20 tokens or Ether                 |
+This repository is forked from [0x-monorepo](https://github.com/0xProject/0x-monorepo)                 |
 
 ## Usage
 
@@ -232,3 +131,47 @@ Run all contracts packages tests:
 ```bash
 yarn test:contracts
 ```
+### Deployed Contracts on Matic Mainnet
+
+- transactionHash: 0x57a31bcc2331949f24ae9ede234e1f9e355939ad31169a6a8fa09cc5f752bc74
+- ERC20Proxy successfully deployed at 0x66dc3b01f674b6c960cf60f3fb78e16342553cab
+- transactionHash: 0x5e5c619a8363ffc4791ed3713605bdd77855bfee7999dc50ea6005fe2ad0626d
+- ERC721Proxy successfully deployed at 0xb5d157ef45d8bfc9c413d00d0e902fe6a3ddbf8b
+- transactionHash: 0x557f830a812aebe0b895b0bbaa20149e230908292ba5e359dfbaaf63f0bf38c4
+- ZRXToken successfully deployed at 0x93719d8478d238c5996806a733e2068e0ead0b0e
+- transactionHash: 0xd2cbb340a83af6591b7b0c84a15de098951d35bc263085755f49ea78f60e746b
+- WETH9 successfully deployed at 0x6f3b2e10972cd42219f4108e72e9e15a616e5ba9
+- transactionHash: 0x63e9a96faa111f0bbf48ae3df6f30f200d2f4281141d9ca4e740afcd1d249b45
+- Exchange successfully deployed at 0x08330ac7b7f4a6695f41e3b8419113534cd61df0
+- transactionHash: 0xfa15f97c9f45502bcf150a49aee02d78e2ac9298c55f19e3cc796e4e12b69a14
+- DummyERC20Token successfully deployed at 0xc2c84b533a9518241e73d525afc89c3c57769e9f
+- transactionHash: 0x8e13348198dd2c57d081c868a495bf3c4de04d5b090b01dd2e6b783ea57f8539
+- DummyERC20Token successfully deployed at 0x48de9fa861a51ffe9fe0c614348d6e556034803b
+- transactionHash: 0xcf7472860d84aa307b6f041c3234abc1d6d4ddc71c76e2d71a1dc01f83989465
+- DummyERC20Token successfully deployed at 0x280c9ece1db286bea1c717849e0fc03bc38f7f8d
+- transactionHash: 0xb1194bd8b4df51a1faeacb1019fdba4c083cf1871dd26f4877f2c4f3afa8d462
+- DummyERC20Token successfully deployed at 0x20489f8affb46e30931a456fbbb4d92d9b655bf8
+- transactionHash: 0x338b5d53a33c1b9a11425757c7881e6301b8cd11b19d3de91fa1d169e2f412ab
+- DummyERC20Token successfully deployed at 0x46bf061ff7248cd33f060be98aa2fa57f0b9ce1f
+- transactionHash: 0xa290bee10b323b67681c88609094638597a968e762a91669d916daa82be342d5
+- DummyERC721Token successfully deployed at 0xbc5c7781f1e45c906195833a9a9967a19f175cc3
+- transactionHash: 0x88c35b0bf25037b8d7ceac07abb574d929c4a9673a618707b9e6e5362aed6f50
+- ERC1155Proxy successfully deployed at 0xade2af52f3dbe515e4abae89cfad06e6e60ff049
+- transactionHash: 0x45c6b9ecfa956a91a134ead4e6d8e6a132ea7bd211d7e5179f46350c07f0d706
+- StaticCallProxy successfully deployed at 0xc3bf2397eac18ff4107f6edf68e62aff1b11990d
+- transactionHash: 0x1fffd16b406107fe58ca1e101acb10b73b91bfcaee6f12f0a0bfed095465ba55
+- MultiAssetProxy successfully deployed at 0x636168180a78687127ee8479893f0a2f5eb7a640
+- transactionHash: 0x6603f6e26dc904560efed8268599d2c85c02dd49c9ca7cfe05ade268e4b97666
+- Forwarder successfully deployed at 0x995fde61633433fdb6d2c6f7ca885255d526f5c7
+- transactionHash: 0xe737beb6a263e53970b2d43fbc6844bd39285f8c0d863520e78d73d4e69572b6
+- OrderValidator successfully deployed at 0xab979e26f455465b094778b4717918e64d06c2dc
+- transactionHash: 0xdcbb8223ba2dcf9825d6f2b3ef3e310973d56e4f5798c08e310025253c76a440
+- DutchAuction successfully deployed at 0xb399ee7b4cb4344958bc47652b886c63493e3e42
+- transactionHash: 0xf7937454959a68eee278d15537c4f58015ddb1ebe7a6d11960276f949fd1905d
+- AssetProxyOwner successfully deployed at 0x8b8ebd096ed2ba7f415b5c185511eee8be59f814
+- transactionHash: 0x01b82913dff28bcd2b2b66c099578d392cedfe9688e798008711500757352846
+- CoordinatorRegistry successfully deployed at 0x9928a61ad210ae32e129d94195f27c556d33f963
+- transactionHash: 0x315edcae37a834b0ea16644849659865cb6cd15d6f43d6583200ef44775094da
+- Coordinator successfully deployed at 0x8b259a94e4b23816b2751c04dc03f9953ed91034
+- transactionHash: 0xe43b7a87da062ce62a20579abb65ba73b18ada67c0ab0a4e001c4327c41c2cc9
+- DevUtils successfully deployed at 0x35a6d26072d5b25c6dff261c756b0bf142e7c21b
